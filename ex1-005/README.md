@@ -31,7 +31,7 @@ The following modules and tools are recquired to have the same experience as mat
    + featureNormalize.py contains the code for normalizing each feature for the data given
    + gradientDescent.py contains the code for updating theta on each iteration i.e.
    + 
---- 
+---python
    for iter in range(0,num_iters):
         Xtheta=np.dot(X,theta)
         thetaminusy=Xtheta-y
@@ -47,11 +47,11 @@ The following modules and tools are recquired to have the same experience as mat
    2. **Economics**
 	-Linear regression is used to predict consumptional spending,fixed investment spending and inventory investments e.t.c
    3. **Enviromental science**
-	-The Enviromental Effects Monitoring Program in canada uses statiscal analysis on fish and bethnic surveys to measure the effets of pulp mill 		or metal mine affluent on the acquatic ecosystem.
+	-The Enviromental Effects Monitoring Program in canada uses statiscal analysis on fish and bethnic surveys to measure the effets of pulp mill or metal mine affluent on the acquatic ecosystem.
 
 
 ** Credits **
-  *This code was edited and compiled by [Ndirangu Wilson](wilson.ndirangu@myshoppingmate.com) *
+*This code was edited and compiled by [Ndirangu Wilson](wilson.ndirangu@myshoppingmate.com) *
 
 
 
