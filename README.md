@@ -2,7 +2,7 @@
 
 PYTHONML
 ==============
-##Python adaptation of the cousera's Machine Learning course  taught by Professa Andrew Ng##
+###Python adaptation of the cousera's Machine Learning course  taught by Professa Andrew Ng###
 This is the python adaptation of the machine learning course taught by professa Andrew Ng .
 The codes are translated by [Ndirangu Wilson](wilson.ndirangu@myshoppingmate.com) and are made to replicate the functionality of the ones provided by coursera and written in octave\Matlab
 ###*NOTE*###
@@ -19,7 +19,7 @@ The following python tools and modules are recquired to replicate the Octave\Mat
 
 ###Contents###
    1. **ex1-005**
-       This contains the codes for the first programming exercise which involves linear regression with single and multiple variables
+   This contains the codes for the first programming exercise which involves linear regression with single and multiple variables
        the README file in the ex1-005 folder  contains instructions on how to run the code
 
  
