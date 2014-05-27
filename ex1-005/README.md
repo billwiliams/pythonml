@@ -29,12 +29,13 @@ The following modules and tools are recquired to have the same experience as mat
    * ex1data2.txt file contains data for the linear regression with multiple variables
    * computeCostMulti.py file contains code for calculating the cost of using theta
    + featureNormalize.py contains the code for normalizing each feature for the data given
-   + gradientDescent.py contains the code for updating $\theta/$ on each iteration i.e.
+   + gradientDescent.py contains the code for updating theta on each iteration i.e.
+   + 
 --- 
-   `for iter in range(0,num_iters):
+   for iter in range(0,num_iters):
         Xtheta=np.dot(X,theta)
         thetaminusy=Xtheta-y
-        theta-=np.dot((alpha/m),np.dot(Xtranspose,thetaminusy))`
+        theta-=np.dot((alpha/m),np.dot(Xtranspose,thetaminusy))
 
 ---
    + normalEqn.py contains code to calculate theta using normal equations :
@@ -47,7 +48,9 @@ The following modules and tools are recquired to have the same experience as mat
 	-Linear regression is used to predict consumptional spending,fixed investment spending and inventory investments e.t.c
    3. **Enviromental science**
 	-The Enviromental Effects Monitoring Program in canada uses statiscal analysis on fish and bethnic surveys to measure the effets of pulp mill 		or metal mine affluent on the acquatic ecosystem.
-####*** Credits ***####
+
+
+** Credits **
   *This code was edited and compiled by [Ndirangu Wilson](wilson.ndirangu@myshoppingmate.com) *
 
 
