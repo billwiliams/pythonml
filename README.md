@@ -2,7 +2,7 @@
 
 PYTHONML
 ==============
-###Python adaptation of the cousera's Machine Learning course  taught by Professa Andrew Ng###
+###Python adaptation of the coursera's Machine Learning course  taught by Professa Andrew Ng###
 This is the python adaptation of the machine learning course taught by professa Andrew Ng .
 The codes are translated by [Ndirangu Wilson](wilson.ndirangu@myshoppingmate.com) and are made to replicate the functionality of the ones provided by coursera and written in octave\Matlab
 ###*NOTE*###
