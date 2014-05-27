@@ -19,7 +19,8 @@ The following python tools and modules are recquired to replicate the Octave\Mat
 
 ###Contents###
    1. **ex1-005**
-   This contains the codes for the first programming exercise which involves linear regression with single and multiple variables
+      
+This contains the codes for the first programming exercise which involves linear regression with single and multiple variables
        the README file in the ex1-005 folder  contains instructions on how to run the code
 
  
