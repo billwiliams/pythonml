@@ -30,8 +30,8 @@ The following modules and tools are recquired to have the same experience as mat
    * computeCostMulti.py file contains code for calculating the cost of using theta
    + featureNormalize.py contains the code for normalizing each feature for the data given
    + gradientDescent.py contains the code for updating theta on each iteration i.e.
-   + 
----python
+    
+---
    for iter in range(0,num_iters):
         Xtheta=np.dot(X,theta)
         thetaminusy=Xtheta-y
@@ -50,8 +50,9 @@ The following modules and tools are recquired to have the same experience as mat
 	-The Enviromental Effects Monitoring Program in canada uses statiscal analysis on fish and bethnic surveys to measure the effets of pulp mill or metal mine affluent on the acquatic ecosystem.
 
 
-** Credits **
-*This code was edited and compiled by [Ndirangu Wilson](wilson.ndirangu@myshoppingmate.com) *
+***Credits***
+
+This code was edited and compiled by [Ndirangu Wilson](wilson.ndirangu@myshoppingmate.com) 
 
 
 
