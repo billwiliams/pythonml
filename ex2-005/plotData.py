@@ -12,14 +12,26 @@
 """
 #function to plot data
 def plotData(X,y):
+    """
+    * function plotData takes two arguments X and y where X is the number of features and y the binary result and plots the data on a scatter plot
+
+
+    """
     #importing numpy and pylab for plotting the data
     import numpy as np
     import pylab as pl
-    pos=X[np.argwhere(y)]
-    #pos=pos.reshape([:,1])
-    neg=X[np.where(y==0)[0][0]]
-    #neg=neg.reshape([:,1])
+    #get the indices of the positive examples
+    pos=np.where(y==1)[0]
+    #get the indices of the negative examples
+    neg=np.where(y==0)[0]
+    #start pylab in interactive mode
     pl.ion();
+    #create a figure
     fig=pl.figure();
-    pl.plot(X[pos, 0], X[pos, 1], 'k+')
-    return [pos,neg]
+    #plot data whose output is positive i.e Admitted
+    pl.plot(X[pos, 0], X[pos, 1], 'k+',linewidth=2.0,c='b',label='Admitted')
+    #plot Data whose result i.e. y==0
+    pl.plot(X[neg, 0], X[neg, 1], 'ko',c='y',label='Not Admitted')
+    #show labels
+    pl.legend()
+    
