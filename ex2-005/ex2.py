@@ -25,6 +25,8 @@ import plotData as pD
 import costFunction as cF
 #importing MapFeature
 import mapFeature as mF
+#importing sigmoid fucntion
+import sigmoid as sg
 #loading the training data from text file
 data=np.loadtxt(("ex2data1.txt"),delimiter=",")
 X= data[:,:2]
@@ -39,6 +41,8 @@ pD.plotData(X, y);
 
 #Put some labels ;
 
+
+pl.show()
 pl.xlabel('Exam 1 score')
 pl.ylabel('Exam 2 score')
 
@@ -87,6 +91,24 @@ cost=res.fun
 #printing the values
 print("theta found by Newton-CG is %s\n" %theta)
 print("cost found by Newton-CG is %s\n" %cost)
+
+"""
+============== Part 4: Predict and Accuracies ==============
+%  After learning the parameters, you'll like to use it to predict the outcomes
+%  on unseen data. In this part, you will use the logistic regression model
+%  to predict the probability that a student with score 45 on exam 1 and 
+%  score 85 on exam 2 will be admitted.
+%
+
+
+
+"""
+#reshaping theta to a matrix of 3X1 inorder to compute matrix multiplication
+thet=np.matrix(theta.reshape(3,1))
+
+prob =sg.sigmoid([1, 45, 85] * thet);
+prob=str(prob).replace(' ','').replace('[','').replace(']','')
+print('For a student with scores 45 and 85, we predict an admission probability of %f\n\n', prob);
 #predicting on our data
 import predict as pd
 p = pd.predict(theta, X)

@@ -29,9 +29,7 @@ def plotData(X,y):
     #create a figure
     fig=pl.figure();
     #plot data whose output is positive i.e Admitted
-    pl.plot(X[pos, 0], X[pos, 1], 'k+',linewidth=2.0,c='b',label='Admitted')
+    pl.plot(X[pos, 0], X[pos, 1], 'k+',linewidth=2.0,c='b',label="admitted")
     #plot Data whose result i.e. y==0
-    pl.plot(X[neg, 0], X[neg, 1], 'ko',c='y',label='Not Admitted')
-    #show labels
-    pl.legend()
+    pl.plot(X[neg, 0], X[neg, 1], 'ko',c='y',label="Not admitted")
     
