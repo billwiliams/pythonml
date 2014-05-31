@@ -18,19 +18,20 @@ def costFunctionReg(theta, X, y, labda):
     m=len(y)
     #calculating predictions using the sigmoid function
     predictions=sg.sigmoid(np.dot(X,theta))
+    predictions=predictions.reshape(np.size(predictions),1)
     y=y.reshape(np.size(y),1)
     predictionsminusy=predictions-y
-    predictionsminusyr=predictionsminusy.reshape(1,np.size(predictionsminusy))
+    #predictionsminusyr=predictionsminusy.reshape(np.size(predictionsminusy),1)
     #calculating the cost of using theta as per logistic regression equation
     logistic=(-y*np.array(np.log(predictions)))-((1-y)*np.array(np.log(1-predictions)))
-    endr,endc=np.shape(theta)
-    J=1./m * np.sum(logistic)+(labda/(2*m))*np.sum(theta[0:endc,0]**2)
+    endr=np.size(theta)
+    J=1./m * np.sum(logistic)+(labda/(2*m))*np.sum(theta[0:endr]**2)
     #computing partial derivatives w.r.t to parameters
     endg=np.size(grad)
     endx,end=np.shape(X)
-    grad[0,0]= 1.0/m * np.sum(np.dot((X[:,0]) ,(predictionsminusyr) ));
+    grad[0,0]= 1.0/m * np.sum(np.dot((X[:,0]) ,(predictionsminusy) ));
     
-    gra=1./m * (np.dot((predictionsminusy.T), (X[:,1:end]))).T + (labda/m)*theta[1:endr]
+    gra=np.transpose(1./m * (np.dot((np.transpose(predictionsminusy)), (X[:,1:end])))) + ((labda/m)*theta[1:endr])
     
     grad=np.insert(grad,1,gra,0)
     

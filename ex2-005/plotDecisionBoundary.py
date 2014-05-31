@@ -24,6 +24,7 @@ def plotDecisionBoundary(theta,X,y):
     import numpy as np
     #plotting module
     import pylab as plt
+    import mapFeature as mF
     # plot the Data
     pD.plotData(X[:,1:3],y)
     #getting the shape of the matrix x
@@ -40,11 +41,11 @@ def plotDecisionBoundary(theta,X,y):
          u =np.linspace(-1, 1.5, 50);
          v = np.linspace(-1, 1.5, 50);
 
-         z = np.zeros(len(u), len(v));
+         z = np.zeros((len(u), len(v)),dtype=float);
 
          for i in range (len(u)):
              for j in range(len(v)):
-                 #z(i,j)=mF.mapFeature(u(i), v(j))*theta
+                 z[i,j]=mF.mapFeature(u[i], v[j])*theta
          z=z.T
 
          plt.contour(u, v, z, [0, 0], 'LineWidth=2.0')

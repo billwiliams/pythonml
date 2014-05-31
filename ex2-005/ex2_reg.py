@@ -20,7 +20,8 @@ import pylab as pl
 
 import plotData as pD
 import mapFeature as mF
-
+import predict as pd
+import plotDecisionBoundary as pDB
 data = np.loadtxt(('ex2data2.txt'),delimiter=",");
 X = data[:, :2]; 
 y = data[:, 2];
@@ -60,3 +61,8 @@ initial_theta =np.zeros((n, 1),dtype=float);
 labda = 1;
 import costFunctionReg as cFR
 cost,theta=cFR.costFunctionReg(initial_theta,X,y,labda)
+pDB.plotDecisionBoundary(theta, X, y)
+
+p = pd.predict(theta, X);
+
+print('Train Accuracy: %f\n', np.mean(np.double(p == y)) * 100);
