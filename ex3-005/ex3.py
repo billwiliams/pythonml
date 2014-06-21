@@ -51,7 +51,7 @@ rand_indices=np.random.permutation(m)
 sel=X[rand_indices[0:100],:]
 
 print(np.size(sel))
-lamda=0.001
+lamda=0.1
 all_theta=oneVsAll.oneVsAll(X,y,num_labels,lamda)
 import predictOneVsAll as pD
 pred = pD.predictOneVsAll(all_theta, X);
