@@ -18,9 +18,16 @@ The following python tools and modules are recquired to replicate the Octave\Mat
 
 
 ###Contents###
-   1. **ex1-005**
+   **ex1-005**
       
 This contains the codes for the first programming exercise which involves linear regression with single and multiple variables
        the README file in the ex1-005 folder  contains instructions on how to run the code
 
- 
+   **ex2-005**
+      
+This contains the codes for the second programming exercise which involves logistic regression with  and without regularization 
+       the README file in the ex2-005 folder  contains instructions on how to run the code
+
+   **ex3-005**
+      
+This contains the codes for the third programming exercise which involves logistic regression and neural network learning for handwritten digit recognition the README file in the ex3-005 folder  contains instructions on how to run the code
