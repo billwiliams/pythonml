@@ -29,6 +29,7 @@ def plotDecisionBoundary(theta,X,y):
     pD.plotData(X[:,1:3],y)
     #getting the shape of the matrix x
     m,n=np.shape(X)
+    #starting an interactive mode in pylab
     plt.ion()
 
     if (n<=3):
@@ -39,16 +40,21 @@ def plotDecisionBoundary(theta,X,y):
         plt.plot(plot_x, plot_y)
     else:
          u =np.linspace(-1, 1.5, 50);
+         u=u.reshape(np.size(u),1);
          v = np.linspace(-1, 1.5, 50);
+         v=v.reshape(np.size(v),1);
 
-         z = np.zeros((len(u), len(v)),dtype=float);
+         z = np.matrix(np.zeros((len(u), len(v)),dtype=float));
 
          for i in range (len(u)):
              for j in range(len(v)):
-                 z[i,j]=mF.mapFeature(u[i], v[j])*theta
-         z=z.T
-
-         plt.contour(u, v, z, [0, 0], 'LineWidth=2.0')
+                 z[i,j]=np.dot(mF.mapFeature(u[i], v[j]),theta)
+         
+         #reshaping back to original way to enable the plotting
+         u =np.linspace(-1, 1.5, 50);
+         v =np.linspace(-1, 1.5, 50);
+         #plotting a contour for the decision boundary z is transposed
+         plt.contour(u, v,np.transpose( z),(0,0),label="decision")
 
 
         

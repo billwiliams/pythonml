@@ -32,7 +32,7 @@ def oneVsAll(X,y,num_labels,lamda):
     initial_theta=np.zeros((n+1,1),dtype=float)
     for c in range (1,num_labels+1):
         theta=optimize.minimize(cFR.costFunctionReg, initial_theta, args=(X,np.equal(y,c).astype(int),lamda), \
-                                                                               method='CG',jac=True, options={'maxiter':10})
+                                                                               method='CG',jac=True, options={'maxiter':2000})
         all_theta[c-1,:]=theta.x.conj().T
 
     all_theta.flatten(1)

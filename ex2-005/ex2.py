@@ -103,6 +103,9 @@ print("cost found by Newton-CG is %s\n" %cost)
 
 
 """
+#importing plotting decision boundary
+import plotDecisionBoundary as pDB
+pDB.plotDecisionBoundary(theta,X,y)
 #reshaping theta to a matrix of 3X1 inorder to compute matrix multiplication
 thet=np.matrix(theta.reshape(3,1))
 
