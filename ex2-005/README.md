@@ -33,4 +33,4 @@ Python adaptation of coursera's Machine Learning taught by professa Andrew Ng
 5. Conditional random fields, an extension of logistic regression to sequential data, are used in natural language processing.
 
 ###credits###
-This code is edited  by Ndirangu Wilson wilson.ndirangu@myshoppingmate.com
+This code is edited  by Ndirangu Wilson Craigvanwilson@gmail.com
