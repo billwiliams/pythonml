@@ -52,7 +52,7 @@ The following modules and tools are recquired to have the same experience as mat
 
 ***Credits***
 
-This code was edited and compiled by [Ndirangu Wilson](wilson.ndirangu@myshoppingmate.com) 
+This code was edited and compiled by [Bill Williams](craigvanwilson@gmail.com) 
 
 
 
